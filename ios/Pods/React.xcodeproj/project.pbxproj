@@ -428,10 +428,11 @@
 			};
 			name = Release;
 		};
-		9D51410C35DFA54B041163B6545D038D /* Release */ = {
+		B22647A03D77A6739D21BDE63EFCBC5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2703B39C9F13C10ABC0D028E568F948D /* React.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -441,7 +442,7 @@
 					"RCT_ENABLE_INSPECTOR=0",
 					"ENABLE_PACKAGER_CONNECTION=0",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,10 +450,11 @@
 			};
 			name = Release;
 		};
-		F29F0ED83920ED125232857757FF2F77 /* Debug */ = {
+		EF56C2E598753AF35CF42F3626ABE36E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2EB028098F8606B09571CFAAF68D25B7 /* React.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -462,7 +464,7 @@
 					"RCT_ENABLE_INSPECTOR=0",
 					"ENABLE_PACKAGER_CONNECTION=0",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,8 +486,8 @@
 		A179F86E2BF8E5ED372A4A70D3EE7169 /* Build configuration list for PBXAggregateTarget "React" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F29F0ED83920ED125232857757FF2F77 /* Debug */,
-				9D51410C35DFA54B041163B6545D038D /* Release */,
+				EF56C2E598753AF35CF42F3626ABE36E /* Debug */,
+				B22647A03D77A6739D21BDE63EFCBC5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

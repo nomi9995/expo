@@ -1,0 +1,26 @@
+{
+  "name": "EXPaymentsStripe",
+  "version": "8.4.0",
+  "summary": "Provides support for payments through Stripe and Apple Pay on iOS (in bare apps), and Stripe on Android (plus Android Pay with bare apps).",
+  "description": "Provides support for payments through Stripe and Apple Pay on iOS (in bare apps), and Stripe on Android (plus Android Pay with bare apps).",
+  "license": "MIT",
+  "authors": "650 Industries, Inc.",
+  "homepage": "https://docs.expo.io/versions/latest/sdk/payments/",
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source": {
+    "git": "https://github.com/expo/expo.git"
+  },
+  "source_files": "EXPaymentsStripe/**/*.{h,m,mm}",
+  "preserve_paths": "EXPaymentsStripe/**/*.{h,m,mm}",
+  "requires_arc": true,
+  "dependencies": {
+    "UMCore": [
+
+    ],
+    "Stripe": [
+      "~> 14.0.1"
+    ]
+  }
+}

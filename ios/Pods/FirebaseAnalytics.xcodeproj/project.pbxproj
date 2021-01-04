@@ -17,7 +17,7 @@
 				9FB72E4CDCD5AE58DBE3DD4857A9D212 /* PBXTargetDependency */,
 				87555E9B03D38F2E91A0C4DC692960A2 /* PBXTargetDependency */,
 				429D4865CC0DEFF9B1E1050783DE9B32 /* PBXTargetDependency */,
-				37CD136865F7E72DC13DC143ECB9BE20 /* PBXTargetDependency */,
+				32F996E6497EFE3985652E23F2821078 /* PBXTargetDependency */,
 			);
 			name = FirebaseAnalytics;
 		};
@@ -52,7 +52,7 @@
 			remoteGlobalIDString = 80B861CBFC18436AFD9A3703F00CEEC4;
 			remoteInfo = GoogleUtilities;
 		};
-		E632947BEE5B134AE6B13FFD246E17BE /* PBXContainerItemProxy */ = {
+		D8FA70DFBEF6B08A651BE7FD2E32BA69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6484606E929A3565DBA17DE6C3ED22F /* nanopb.xcodeproj */;
 			proxyType = 1;
@@ -189,10 +189,10 @@
 			name = FirebaseCore;
 			targetProxy = 6827952C95E2BAB1AC8916DCAB332B38 /* PBXContainerItemProxy */;
 		};
-		37CD136865F7E72DC13DC143ECB9BE20 /* PBXTargetDependency */ = {
+		32F996E6497EFE3985652E23F2821078 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = nanopb;
-			targetProxy = E632947BEE5B134AE6B13FFD246E17BE /* PBXContainerItemProxy */;
+			targetProxy = D8FA70DFBEF6B08A651BE7FD2E32BA69 /* PBXContainerItemProxy */;
 		};
 		429D4865CC0DEFF9B1E1050783DE9B32 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -212,13 +212,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1E521E4F3E4E61645EE3557E4243B4FD /* Release */ = {
+		0F539D773A62EE237652AB0C3CD894D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1963669BE92F113AF5EB52C3F578DC9A /* FirebaseAnalytics.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -226,13 +227,14 @@
 			};
 			name = Release;
 		};
-		314FA73B6D5B3E1BE569194C47F0732E /* Debug */ = {
+		283FB762EBE0FD91951D524EFFB8D525 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C912F062131F7BBC6B7BD49E8B5CC1E /* FirebaseAnalytics.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -382,8 +384,8 @@
 		DCD6CF5E4B4830400E93573BCC4D868E /* Build configuration list for PBXAggregateTarget "FirebaseAnalytics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				314FA73B6D5B3E1BE569194C47F0732E /* Debug */,
-				1E521E4F3E4E61645EE3557E4243B4FD /* Release */,
+				283FB762EBE0FD91951D524EFFB8D525 /* Debug */,
+				0F539D773A62EE237652AB0C3CD894D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

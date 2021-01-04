@@ -30,7 +30,7 @@
 			remoteGlobalIDString = 78B41281B6D2EAC6C3C75FFE5052E985;
 			remoteInfo = GoogleDataTransport;
 		};
-		50BD88A10DDE3A82100B9F3BBD0C845E /* PBXContainerItemProxy */ = {
+		5EF165F04034359DBADA87BB87120981 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 824DD5954CCEACD8EEE92626E02B93D5 /* nanopb.xcodeproj */;
 			proxyType = 1;
@@ -168,7 +168,7 @@
 			);
 			dependencies = (
 				3F0704CB227C3A85F230C4E38D60B745 /* PBXTargetDependency */,
-				27F02B30E2475D9BCFFBD2018795CCD2 /* PBXTargetDependency */,
+				FB1E79EFFB4BDE3BEE854A3320A884E1 /* PBXTargetDependency */,
 			);
 			name = GoogleDataTransportCCTSupport;
 			productName = GoogleDataTransportCCTSupport;
@@ -228,49 +228,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		27F02B30E2475D9BCFFBD2018795CCD2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = nanopb;
-			targetProxy = 50BD88A10DDE3A82100B9F3BBD0C845E /* PBXContainerItemProxy */;
-		};
 		3F0704CB227C3A85F230C4E38D60B745 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleDataTransport;
 			targetProxy = 3B18A582CFC7DE41E54CB45930EA625D /* PBXContainerItemProxy */;
 		};
+		FB1E79EFFB4BDE3BEE854A3320A884E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nanopb;
+			targetProxy = 5EF165F04034359DBADA87BB87120981 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1CF499A1523C3A8DFA44EC202FAA50FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C64E18019C15FD7C64AC46ADBDA4F2E2 /* GoogleDataTransportCCTSupport.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = GoogleDataTransportCCTSupport;
-				PRODUCT_NAME = GoogleDataTransportCCTSupport;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4D0C8B8CA03BAFAE86E8422B8E4D64FB /* Release */ = {
+		5AD4D3150C47D50E7BBC9EB09A3C9FBF /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 54777E3586B086311A7B857C65613D15 /* GoogleDataTransportCCTSupport.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -352,6 +331,29 @@
 			};
 			name = Debug;
 		};
+		F06A4A7EED0A68E5E0A16F595422156D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C64E18019C15FD7C64AC46ADBDA4F2E2 /* GoogleDataTransportCCTSupport.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GoogleDataTransportCCTSupport;
+				PRODUCT_NAME = GoogleDataTransportCCTSupport;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		F0D79B3ACB2B98A62A7904278CDC0032 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -429,8 +431,8 @@
 		EE1A0DC2E963661B98116F93AC67A0EA /* Build configuration list for PBXNativeTarget "GoogleDataTransportCCTSupport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1CF499A1523C3A8DFA44EC202FAA50FC /* Debug */,
-				4D0C8B8CA03BAFAE86E8422B8E4D64FB /* Release */,
+				F06A4A7EED0A68E5E0A16F595422156D /* Debug */,
+				5AD4D3150C47D50E7BBC9EB09A3C9FBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

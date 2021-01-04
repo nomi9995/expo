@@ -285,16 +285,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		49FFED9DC42B8502970B6AD8EE93CD6C /* Debug */ = {
+		7ECB706538041C08273E386C1261E9C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EFBD4078DA41454E8B075707C665410 /* FBReactNativeSpec.debug.xcconfig */;
+			baseConfigurationReference = BD5B99EA25A07FD322CC86FAEDD03E68 /* FBReactNativeSpec.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/FBReactNativeSpec/FBReactNativeSpec-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -306,8 +307,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		B761512AFC605B065D85DF4B562043A9 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -371,16 +373,17 @@
 			};
 			name = Release;
 		};
-		C433875C5ABA0FCA855667F3665BCB7A /* Release */ = {
+		C31099EF8319F5DB6458F63636C4414A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD5B99EA25A07FD322CC86FAEDD03E68 /* FBReactNativeSpec.release.xcconfig */;
+			baseConfigurationReference = 0EFBD4078DA41454E8B075707C665410 /* FBReactNativeSpec.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/FBReactNativeSpec/FBReactNativeSpec-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -392,9 +395,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		CA6ABF9333CA173DDA86B9553459F717 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -468,8 +470,8 @@
 		93F3D5A285F8B9EB9D74A22B7CFE148F /* Build configuration list for PBXNativeTarget "FBReactNativeSpec" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				49FFED9DC42B8502970B6AD8EE93CD6C /* Debug */,
-				C433875C5ABA0FCA855667F3665BCB7A /* Release */,
+				C31099EF8319F5DB6458F63636C4414A /* Debug */,
+				7ECB706538041C08273E386C1261E9C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

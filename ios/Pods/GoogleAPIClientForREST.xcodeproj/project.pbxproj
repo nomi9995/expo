@@ -337,15 +337,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		45B08427DD78F654E0C0AED95C8A2DAC /* Debug */ = {
+		78B877B06BD80F17770155585CB519E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8372A42F43407CD40D118B6EAE7B5BF /* GoogleAPIClientForREST.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/GoogleAPIClientForREST/GoogleAPIClientForREST-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -360,15 +361,16 @@
 			};
 			name = Debug;
 		};
-		4F9601A3D3C31B40413081101E149384 /* Release */ = {
+		8842A88C5C59F332D0D1BC2410808B87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F9CA57B931343C966579385A25979DB /* GoogleAPIClientForREST.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/GoogleAPIClientForREST/GoogleAPIClientForREST-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -527,8 +529,8 @@
 		BB4B0E0284A4AB094B344AD4DF50558C /* Build configuration list for PBXNativeTarget "GoogleAPIClientForREST" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45B08427DD78F654E0C0AED95C8A2DAC /* Debug */,
-				4F9601A3D3C31B40413081101E149384 /* Release */,
+				78B877B06BD80F17770155585CB519E6 /* Debug */,
+				8842A88C5C59F332D0D1BC2410808B87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

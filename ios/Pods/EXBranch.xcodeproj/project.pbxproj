@@ -35,7 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4C67702C82B813F359BFCADAA134BB83 /* PBXContainerItemProxy */ = {
+		4C5FCFCC36A43B86790C4D26160E37C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A0160E0E485AF7DD3E4EAC1994CFEB81 /* Branch.xcodeproj */;
 			proxyType = 1;
@@ -49,7 +49,7 @@
 			remoteGlobalIDString = 153171642F5C5CBC05FD3EF6B23A3F36;
 			remoteInfo = UMCore;
 		};
-		F0002ECEE93F2E68FB3BD8CFE4C548AC /* PBXContainerItemProxy */ = {
+		A132556D132C416B3CEA7A6189F5F587 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 197B4E92A220828AB7FD641903EB8BEE /* React-Core.xcodeproj */;
 			proxyType = 1;
@@ -239,8 +239,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				D6929ECB55036F516455844FCA38EDEA /* PBXTargetDependency */,
-				731FFDF861E2BBC42618DA96CD50B570 /* PBXTargetDependency */,
+				F3BCFBC59740394E184922D9B857DF1A /* PBXTargetDependency */,
+				0C8265626AB7626C9C7AC06B01D3D165 /* PBXTargetDependency */,
 				CA32AAC33DF5AFDFBDDA9EE1BB5BCA0B /* PBXTargetDependency */,
 			);
 			name = EXBranch;
@@ -310,20 +310,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		731FFDF861E2BBC42618DA96CD50B570 /* PBXTargetDependency */ = {
+		0C8265626AB7626C9C7AC06B01D3D165 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "React-Core";
-			targetProxy = F0002ECEE93F2E68FB3BD8CFE4C548AC /* PBXContainerItemProxy */;
+			targetProxy = A132556D132C416B3CEA7A6189F5F587 /* PBXContainerItemProxy */;
 		};
 		CA32AAC33DF5AFDFBDDA9EE1BB5BCA0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = UMCore;
 			targetProxy = 4D61907930648935ADD72224B45204DD /* PBXContainerItemProxy */;
 		};
-		D6929ECB55036F516455844FCA38EDEA /* PBXTargetDependency */ = {
+		F3BCFBC59740394E184922D9B857DF1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Branch;
-			targetProxy = 4C67702C82B813F359BFCADAA134BB83 /* PBXContainerItemProxy */;
+			targetProxy = 4C5FCFCC36A43B86790C4D26160E37C1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7F549D73A9E8864432714791E88D1B11 /* PBXContainerItemProxy */ = {
+		29673CAAFCC8383F061D47C2FE1753F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 30370C30637C5BC8B26AF64A1A750B38 /* FBAudienceNetwork.xcodeproj */;
 			proxyType = 1;
@@ -200,7 +200,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9F1AD47F5C2A5B2AD4234D653966AA4C /* PBXTargetDependency */,
+				2993F06CAD050D1D881E73E4162A8F66 /* PBXTargetDependency */,
 				4175BBA1E7C327419900F9014A3268FC /* PBXTargetDependency */,
 			);
 			name = EXAdsFacebook;
@@ -264,15 +264,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2993F06CAD050D1D881E73E4162A8F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBAudienceNetwork;
+			targetProxy = 29673CAAFCC8383F061D47C2FE1753F0 /* PBXContainerItemProxy */;
+		};
 		4175BBA1E7C327419900F9014A3268FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = UMCore;
 			targetProxy = EBA1D0F85BD4DAC869AAD6592ADA2DC3 /* PBXContainerItemProxy */;
-		};
-		9F1AD47F5C2A5B2AD4234D653966AA4C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBAudienceNetwork;
-			targetProxy = 7F549D73A9E8864432714791E88D1B11 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

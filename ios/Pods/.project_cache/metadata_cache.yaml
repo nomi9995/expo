@@ -1734,6 +1734,10 @@ EXImagePicker:
   LABEL: EXImagePicker
   PROJECT_PATH: EXImagePicker.xcodeproj
   UUID: 9ACF1D2895E366F44F904503F65171CD
+EXInAppPurchases:
+  LABEL: EXInAppPurchases
+  PROJECT_PATH: Expo.xcodeproj
+  UUID: 5C0FEB4A0F434AF39F5F0643249FC426
 EXKeepAwake:
   LABEL: EXKeepAwake
   PROJECT_PATH: EXKeepAwake.xcodeproj
@@ -1762,6 +1766,10 @@ EXMediaLibrary:
   LABEL: EXMediaLibrary
   PROJECT_PATH: EXMediaLibrary.xcodeproj
   UUID: 422CF65902B3ABF0E6A47527F9209CC8
+EXModuleTemplate:
+  LABEL: EXModuleTemplate
+  PROJECT_PATH: Expo.xcodeproj
+  UUID: 2CDEF80A12C65FD8B53B12740A6E666B
 EXNetwork:
   LABEL: EXNetwork
   PROJECT_PATH: EXNetwork.xcodeproj
@@ -1770,6 +1778,10 @@ EXNotifications:
   LABEL: EXNotifications
   PROJECT_PATH: EXNotifications.xcodeproj
   UUID: 6C660F81CE4F0EC96D208B20C3E8B154
+EXPaymentsStripe:
+  LABEL: EXPaymentsStripe
+  PROJECT_PATH: Expo.xcodeproj
+  UUID: 5378FFF7FB10DB05A8AB001559BBFC5F
 EXPermissions:
   LABEL: EXPermissions
   PROJECT_PATH: EXPermissions.xcodeproj
@@ -2066,6 +2078,10 @@ ReactCommon:
   LABEL: ReactCommon
   PROJECT_PATH: ReactCommon.xcodeproj
   UUID: 2610D146B211EB79FECF83D4FA5AB36D
+Stripe:
+  LABEL: Stripe
+  PROJECT_PATH: Stripe.xcodeproj
+  UUID: 522742211DBEFBB550B3D58ACA72638D
 UMAppLoader:
   LABEL: UMAppLoader
   PROJECT_PATH: UMAppLoader.xcodeproj

@@ -411,14 +411,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0300DC51CD2A163559AA530C4B533B07 /* Debug */ = {
+		065BA427D28F3605597914998BC08BBB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2343699DD065F9AE74426791B1D47B9 /* GoogleUtilities.debug.xcconfig */;
+			baseConfigurationReference = 38A3D7C10C84B3765830B059D1AF4908 /* GoogleUtilities.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -430,8 +431,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		227FA20208AA9B57B3F30BF0A6DF11DF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -499,6 +501,29 @@
 			};
 			name = Debug;
 		};
+		48AEA8573B5162EBD2D72DD4A4AB7683 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2343699DD065F9AE74426791B1D47B9 /* GoogleUtilities.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GoogleUtilities;
+				PRODUCT_NAME = GoogleUtilities;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		A584C2147648EE3E5CC67E4A51ECBBD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -561,29 +586,6 @@
 			};
 			name = Release;
 		};
-		A886E1FF7D2A3F61131C2E8C1DBFCE43 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38A3D7C10C84B3765830B059D1AF4908 /* GoogleUtilities.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = GoogleUtilities;
-				PRODUCT_NAME = GoogleUtilities;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -599,8 +601,8 @@
 		F82DBBCC99C6B2E255093D72A98DABBD /* Build configuration list for PBXNativeTarget "GoogleUtilities" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0300DC51CD2A163559AA530C4B533B07 /* Debug */,
-				A886E1FF7D2A3F61131C2E8C1DBFCE43 /* Release */,
+				48AEA8573B5162EBD2D72DD4A4AB7683 /* Debug */,
+				065BA427D28F3605597914998BC08BBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

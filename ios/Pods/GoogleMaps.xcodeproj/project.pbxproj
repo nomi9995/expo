@@ -204,32 +204,20 @@
 			};
 			name = Release;
 		};
-		5D97EF07D290BA758332E4E35E893B69 /* Release */ = {
+		32E60F3558829A9279D85B9471265580 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A52113E4503D346AEA64DFC1E7CB098 /* GoogleMaps.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		A65E68B2D081C2D29F6D92D16FBE5984 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DAF6356AE5E13E68D439DA0E29063B1 /* GoogleMaps.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		FE2A80C1F3166F05BDA2034B6A85C790 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -297,14 +285,28 @@
 			};
 			name = Debug;
 		};
+		FF621C683F3CE45C77795BD01E612021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DAF6356AE5E13E68D439DA0E29063B1 /* GoogleMaps.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2CC3365E1BA4D17F45236B6E7CCCDD35 /* Build configuration list for PBXAggregateTarget "GoogleMaps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A65E68B2D081C2D29F6D92D16FBE5984 /* Debug */,
-				5D97EF07D290BA758332E4E35E893B69 /* Release */,
+				FF621C683F3CE45C77795BD01E612021 /* Debug */,
+				32E60F3558829A9279D85B9471265580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

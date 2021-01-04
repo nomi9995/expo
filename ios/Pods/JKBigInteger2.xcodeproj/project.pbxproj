@@ -241,41 +241,17 @@
 			};
 			name = Debug;
 		};
-		1F52748708994DA4E305D1CE903649A2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ECE6C1577E4C9FA9CE1127EA72357F3 /* JKBigInteger2.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/JKBigInteger2/JKBigInteger2-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = JKBigInteger2;
-				PRODUCT_NAME = JKBigInteger2;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		5E0EA59D4D4A9E36B1E9D748609CA511 /* Debug */ = {
+		7C70DC94C8E3469D0CD3F0181E2C4935 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 96B9075D051964F44061F966A4BEA935 /* JKBigInteger2.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/JKBigInteger2/JKBigInteger2-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -352,14 +328,40 @@
 			};
 			name = Release;
 		};
+		FC98781E4D0E1DD1DAA9DF0C149995B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ECE6C1577E4C9FA9CE1127EA72357F3 /* JKBigInteger2.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/JKBigInteger2/JKBigInteger2-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = JKBigInteger2;
+				PRODUCT_NAME = JKBigInteger2;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2A72C1768B65340C24B2CAB66F463C4B /* Build configuration list for PBXNativeTarget "JKBigInteger2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E0EA59D4D4A9E36B1E9D748609CA511 /* Debug */,
-				1F52748708994DA4E305D1CE903649A2 /* Release */,
+				7C70DC94C8E3469D0CD3F0181E2C4935 /* Debug */,
+				FC98781E4D0E1DD1DAA9DF0C149995B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

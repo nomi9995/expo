@@ -27,7 +27,7 @@
 			remoteGlobalIDString = 153171642F5C5CBC05FD3EF6B23A3F36;
 			remoteInfo = UMCore;
 		};
-		E18864F712532ADD198EAF0C3E62E6FC /* PBXContainerItemProxy */ = {
+		DA3C1CA90F072729B747D5E61B07383E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CF1F4A4540EFDAA226452BC78A803DED /* React-Core.xcodeproj */;
 			proxyType = 1;
@@ -169,7 +169,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				45EE9E5E062BB0BA5D602A0C0F7A8B7A /* PBXTargetDependency */,
+				53C1D6AD61E58EEAB94CCA311B8508B6 /* PBXTargetDependency */,
 				B12FD847C6B7B4C3E96498BC6C261A14 /* PBXTargetDependency */,
 			);
 			name = EXSplashScreen;
@@ -228,10 +228,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		45EE9E5E062BB0BA5D602A0C0F7A8B7A /* PBXTargetDependency */ = {
+		53C1D6AD61E58EEAB94CCA311B8508B6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "React-Core";
-			targetProxy = E18864F712532ADD198EAF0C3E62E6FC /* PBXContainerItemProxy */;
+			targetProxy = DA3C1CA90F072729B747D5E61B07383E /* PBXContainerItemProxy */;
 		};
 		B12FD847C6B7B4C3E96498BC6C261A14 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

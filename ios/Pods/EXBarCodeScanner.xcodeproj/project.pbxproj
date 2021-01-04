@@ -46,7 +46,7 @@
 			remoteGlobalIDString = A734124238F83C1FEE81C0FEDC5CDC5C;
 			remoteInfo = UMImageLoaderInterface;
 		};
-		D6E52759E4250365730BBFF31C71EBAA /* PBXContainerItemProxy */ = {
+		D3EE76E8267BB84FA0165117559E12BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91CDC2D87BDC8A16F684255328548C7B /* ZXingObjC.xcodeproj */;
 			proxyType = 1;
@@ -226,7 +226,7 @@
 				871429AD989E3186599EF699CF08201F /* PBXTargetDependency */,
 				2BFB8A4440E89548F4955C56DE0E01A4 /* PBXTargetDependency */,
 				93A68390C96CEA9E7ECF62A558D62E30 /* PBXTargetDependency */,
-				08552FB1D2FD48B2272E67CFBEB442F7 /* PBXTargetDependency */,
+				4E99D2036D135BAE3FAAB0AAAAC827B7 /* PBXTargetDependency */,
 			);
 			name = EXBarCodeScanner;
 			productName = EXBarCodeScanner;
@@ -296,15 +296,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		08552FB1D2FD48B2272E67CFBEB442F7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ZXingObjC;
-			targetProxy = D6E52759E4250365730BBFF31C71EBAA /* PBXContainerItemProxy */;
-		};
 		2BFB8A4440E89548F4955C56DE0E01A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = UMImageLoaderInterface;
 			targetProxy = C85A841131A901B9767EEDB9E066058D /* PBXContainerItemProxy */;
+		};
+		4E99D2036D135BAE3FAAB0AAAAC827B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZXingObjC;
+			targetProxy = D3EE76E8267BB84FA0165117559E12BA /* PBXContainerItemProxy */;
 		};
 		59A81A1A958E2736A161481C612C9C1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

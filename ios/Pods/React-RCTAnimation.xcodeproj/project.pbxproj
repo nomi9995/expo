@@ -379,10 +379,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		17A6C1A15D8536069FCB7962F0A45082 /* Release */ = {
+		3CD12A283922B3386385D3AE8ECBA3CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3861D7CB21E2F3AE09F55484E60AC688 /* React-RCTAnimation.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -394,7 +395,7 @@
 					"RCT_ENABLE_INSPECTOR=0",
 					"ENABLE_PACKAGER_CONNECTION=0",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -538,10 +539,11 @@
 			};
 			name = Debug;
 		};
-		EC78AC082E894C25BA01F206CA678C09 /* Debug */ = {
+		DACD54F797852EC29592765F7D5A75B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81C5977F7A1B7D03C5B1B15AD2F173AD /* React-RCTAnimation.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -553,7 +555,7 @@
 					"RCT_ENABLE_INSPECTOR=0",
 					"ENABLE_PACKAGER_CONNECTION=0",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -574,8 +576,8 @@
 		86CEB9B28E1D3CDB114B6B5427EDBDE6 /* Build configuration list for PBXNativeTarget "React-RCTAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC78AC082E894C25BA01F206CA678C09 /* Debug */,
-				17A6C1A15D8536069FCB7962F0A45082 /* Release */,
+				DACD54F797852EC29592765F7D5A75B8 /* Debug */,
+				3CD12A283922B3386385D3AE8ECBA3CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

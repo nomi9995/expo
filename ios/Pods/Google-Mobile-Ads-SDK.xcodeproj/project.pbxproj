@@ -204,13 +204,28 @@
 			};
 			name = Debug;
 		};
-		28A75695ABA6F68D4D37592D0560CA6A /* Release */ = {
+		B5936E3384FCBFF6AD65D025B0346114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B21D762271B91EB55326721CADBBFF /* Google-Mobile-Ads-SDK.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCD784CAA5386580898F94C9109766C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F5525614359002DE655ECF69F1C48DE /* Google-Mobile-Ads-SDK.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -280,19 +295,6 @@
 			};
 			name = Release;
 		};
-		F56B1549B2A547328D26228AC5F178A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3B21D762271B91EB55326721CADBBFF /* Google-Mobile-Ads-SDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -308,8 +310,8 @@
 		EF81E8D4D8FCE64213B0724B0609CFE8 /* Build configuration list for PBXAggregateTarget "Google-Mobile-Ads-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F56B1549B2A547328D26228AC5F178A4 /* Debug */,
-				28A75695ABA6F68D4D37592D0560CA6A /* Release */,
+				B5936E3384FCBFF6AD65D025B0346114 /* Debug */,
+				CCD784CAA5386580898F94C9109766C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

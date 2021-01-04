@@ -371,14 +371,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		39FAF7C01E5912F758D380B2D240AB0D /* Release */ = {
+		0314C8ADD04663AD5AB6CCC071F2994D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DD78EE9FA2DA6E18BBE549E0C43558B /* FirebaseCore.release.xcconfig */;
+			baseConfigurationReference = B0DB3D3582E0AFEF0D5C72AFCCFEFCB3 /* FirebaseCore.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -390,9 +391,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		4B237500093085EA1F92E4D3383D928C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -522,14 +522,15 @@
 			};
 			name = Debug;
 		};
-		B34AADC61D2003BB8C6EA95E792CED5F /* Debug */ = {
+		FB47512F7646309480EEE40B8F7991C6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0DB3D3582E0AFEF0D5C72AFCCFEFCB3 /* FirebaseCore.debug.xcconfig */;
+			baseConfigurationReference = 4DD78EE9FA2DA6E18BBE549E0C43558B /* FirebaseCore.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -541,8 +542,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -559,8 +561,8 @@
 		EA624771FB5455E109B1ACE25C5C5B56 /* Build configuration list for PBXNativeTarget "FirebaseCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B34AADC61D2003BB8C6EA95E792CED5F /* Debug */,
-				39FAF7C01E5912F758D380B2D240AB0D /* Release */,
+				0314C8ADD04663AD5AB6CCC071F2994D /* Debug */,
+				FB47512F7646309480EEE40B8F7991C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

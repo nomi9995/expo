@@ -413,10 +413,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		044E5E58B30A1A87D651153CED33871F /* Debug */ = {
+		014269A5337717C824419FF9B86A1B0E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6E02BEC0A6972BCB76DEB244CA20FE2 /* React-cxxreact.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -428,7 +429,7 @@
 					"RCT_ENABLE_INSPECTOR=0",
 					"ENABLE_PACKAGER_CONNECTION=0",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -509,10 +510,11 @@
 			};
 			name = Debug;
 		};
-		76FF6882A9FE5D0F057B6429877B3F27 /* Release */ = {
+		38B75B5ED0DD02E7A6523DCA866496AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3DF10393F82C5BEDE31A8224F670823D /* React-cxxreact.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -524,7 +526,7 @@
 					"RCT_ENABLE_INSPECTOR=0",
 					"ENABLE_PACKAGER_CONNECTION=0",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -608,8 +610,8 @@
 		07AF7EB60C2175DA051475BC668DFB5F /* Build configuration list for PBXNativeTarget "React-cxxreact" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				044E5E58B30A1A87D651153CED33871F /* Debug */,
-				76FF6882A9FE5D0F057B6429877B3F27 /* Release */,
+				014269A5337717C824419FF9B86A1B0E /* Debug */,
+				38B75B5ED0DD02E7A6523DCA866496AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

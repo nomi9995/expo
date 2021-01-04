@@ -363,16 +363,17 @@
 			};
 			name = Debug;
 		};
-		39005B49E783A8B7E7068DF47C07AD58 /* Release */ = {
+		55021A7578E3C1E757C15394B5C06100 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3353B00FE5994B5800B4B00A924F643F /* Yoga.release.xcconfig */;
+			baseConfigurationReference = ADDB8689AFF8F0B2094CF29FEDA22ACD /* Yoga.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Yoga/Yoga-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MODULEMAP_FILE = Headers/Public/yoga/Yoga.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -385,9 +386,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		6E10A4F701AA3CED56522B57033B78C9 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -451,16 +451,17 @@
 			};
 			name = Release;
 		};
-		8E642D60EC675F68AAF92DCBAA2D162A /* Debug */ = {
+		F49474F64A227803E0032AE19EB37833 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADDB8689AFF8F0B2094CF29FEDA22ACD /* Yoga.debug.xcconfig */;
+			baseConfigurationReference = 3353B00FE5994B5800B4B00A924F643F /* Yoga.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Yoga/Yoga-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MODULEMAP_FILE = Headers/Public/yoga/Yoga.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -473,8 +474,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -482,8 +484,8 @@
 		B14F1D6AB05C19F355F148A2A88D7DFB /* Build configuration list for PBXNativeTarget "Yoga" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8E642D60EC675F68AAF92DCBAA2D162A /* Debug */,
-				39005B49E783A8B7E7068DF47C07AD58 /* Release */,
+				55021A7578E3C1E757C15394B5C06100 /* Debug */,
+				F49474F64A227803E0032AE19EB37833 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
