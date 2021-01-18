@@ -2,17 +2,59 @@
 import { Platform } from '@unimodules/core';
 import * as rtlDetect from 'rtl-detect';
 
-import { Localization } from './Localization.types';
+import { Localization, LocalizationLanguage } from './Localization.types';
+
+function getLanguage(languageId: string): LocalizationLanguage {
+  if (!languageId || typeof languageId !== 'string') {
+    languageId = 'en';
+  }
+  const [prefix, suffix] = languageId.split('-');
+  const code = prefix.toLowerCase();
+  const region = suffix && suffix.length === 2 ? suffix.toUpperCase() : null;
+  const script = suffix && suffix.length === 4 ? suffix : null;
+  return {
+    code,
+    region,
+    script,
+    isRTL: rtlDetect.isRtlLang(languageId),
+  };
+}
 
 export default {
+  get currency(): string | null {
+    // TODO(Hein)
+    return null;
+  },
+  get decimalSeparator(): string {
+    return (1.1).toLocaleString().substring(1, 2);
+  },
+  get groupingSeparator(): string {
+    const value = (1000).toLocaleString();
+    return value.length === 5 ? value.substring(1, 2) : '';
+  },
   get isRTL(): boolean {
     return rtlDetect.isRtlLang(this.locale) ?? false;
+  },
+  get isMetric(): boolean {
+    const { region } = this;
+    switch (region) {
+      case 'US': // USA
+      case 'LR': // Liberia
+      case 'MM': // Myanmar
+        return false;
+    }
+    return true;
+  },
+  get language(): LocalizationLanguage {
+    return getLanguage(this.locale);
+  },
+  get languages(): LocalizationLanguage[] {
+    return this.locales.map(getLanguage);
   },
   get locale(): string {
     if (!Platform.isDOMAvailable) {
       return '';
     }
-
     const locale =
       navigator.language ||
       navigator['systemLanguage'] ||
@@ -40,22 +82,36 @@ export default {
     return [];
   },
   get region(): string | null {
-    const { locale } = this;
-    if (typeof locale === 'string') {
-      const [, iso] = locale.split('-');
-      return iso ? iso.toUpperCase() : null;
-    }
-    return null;
+    return getLanguage(this.locale).region;
   },
   async getLocalizationAsync(): Promise<Localization> {
-    const { region, isoCurrencyCodes, timezone, locales, locale, isRTL } = this;
-    return {
-      region,
+    const {
+      currency,
+      decimalSeparator,
+      groupingSeparator,
       isoCurrencyCodes,
-      timezone,
-      locales,
-      locale,
+      isMetric,
       isRTL,
+      language,
+      languages,
+      locale,
+      locales,
+      region,
+      timezone,
+    } = this;
+    return {
+      currency,
+      decimalSeparator,
+      groupingSeparator,
+      isoCurrencyCodes,
+      isMetric,
+      isRTL,
+      language,
+      languages,
+      locale,
+      locales,
+      region,
+      timezone,
     };
   },
 };
