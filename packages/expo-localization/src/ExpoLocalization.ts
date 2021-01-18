@@ -6,7 +6,7 @@ import { Localization } from './Localization.types';
 
 export default {
   get currency(): string | null {
-    // TODO(Hein)
+    // TODO: Add support
     return null;
   },
   get decimalSeparator(): string {

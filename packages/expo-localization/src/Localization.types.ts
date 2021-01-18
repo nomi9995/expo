@@ -1,24 +1,24 @@
 export type Localization = {
   /**
-   * Three character ISO 4217 currency code.
+   * Three character ISO 4217 currency code. Returns `null` on web.
    *
-   * @example `USD`, `EUR`, `CNY`
+   * @example `USD`, `EUR`, `CNY`, null
    */
   currency: string | null;
   /**
-   * The decimal separator used for formatting numbers.
+   * Decimal separator used for formatting numbers.
    *
    * @example `,`, '.'
    */
   decimalSeparator: string;
   /**
-   * The grouping separator used for formatting numbers larger than 1000.
+   * Grouping separator used when formatting numbers larger than 1000.
    *
    * @example `.`, '', ','
    */
   groupingSeparator: string;
   /**
-   * A list of all the supported language ISO codes.
+   * List of all the supported language ISO codes.
    */
   isoCurrencyCodes: string[];
   /**
@@ -33,7 +33,7 @@ export type Localization = {
    */
   isRTL: boolean;
   /**
-   * Device locale identifier (Unicode BCP 47), consisting of a language-code and optional script, region and variant codes.
+   * Device locale (Unicode BCP 47 identifier), consisting of a language-code and optional script, region and variant codes.
    *
    * @example `en`, `en-US`, `zh-Hans`, `zh-Hans-CN`, `en-emodeng`
    */
@@ -47,8 +47,7 @@ export type Localization = {
   locales: string[];
   /**
    * Region code for your device which came from Region setting in Language & Region.
-   * This value is always available on iOS, but might not be available on Android devices
-   * without a SIM card.
+   * This value is always available on iOS, but might not be available on Android or web.
    *
    * @example `US`, `NZ`, null
    */

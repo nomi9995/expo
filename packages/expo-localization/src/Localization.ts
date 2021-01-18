@@ -8,21 +8,21 @@ export { Localization };
 const parseLocale = (locale: string): string => locale.replace('_', '-');
 
 /**
- * Three character ISO 4217 currency code.
+ * Three character ISO 4217 currency code. Returns `null` on web.
  *
- * @example `USD`, `EUR`, `CNY`
+ * @example `USD`, `EUR`, `CNY`, null
  */
 export const currency = ExpoLocalization.currency;
 
 /**
- * The decimal separator used for formatting numbers.
+ * Decimal separator used for formatting numbers.
  *
  * @example `,`, '.'
  */
 export const decimalSeparator = ExpoLocalization.decimalSeparator;
 
 /**
- * The grouping separator used for formatting numbers larger than 1000.
+ * Grouping separator used when formatting numbers larger than 1000.
  *
  * @example `.`, '', ','
  */
@@ -47,7 +47,7 @@ export const isMetric = ExpoLocalization.isMetric;
 export const isRTL = ExpoLocalization.isRTL;
 
 /**
- * Device locale identifier (Unicode BCP 47), consisting of a language-code and optional script, region and variant codes.
+ * Device locale (Unicode BCP 47 identifier), consisting of a language-code and optional script, region and variant codes.
  *
  * @example `en`, `en-US`, `zh-Hans`, `zh-Hans-CN`, `en-emodeng`
  */
@@ -69,8 +69,7 @@ export const timezone = ExpoLocalization.timezone;
 
 /**
  * Region code for your device which came from Region setting in Language & Region.
- * This value is always available on iOS, but might not be available on Android devices
- * without a SIM card.
+ * This value is always available on iOS, but might return `null` on Android or web.
  *
  * @example `US`, `NZ`, null
  */

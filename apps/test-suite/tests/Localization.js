@@ -65,13 +65,13 @@ export function test(t) {
   });
 
   t.describe(`Localization defines constants`, () => {
-    t.it('Gets the current device country', async () => {
+    t.it('Gets the region', async () => {
       const result = Localization.region;
       if (Platform.OS !== 'web' || result) {
         validateString(result);
       }
     });
-    t.it('Gets the current locale', async () => {
+    t.it('Gets the locale', async () => {
       validateString(Localization.locale);
     });
     t.it('Gets the preferred locales', async () => {
@@ -87,18 +87,18 @@ export function test(t) {
         validateString(iso);
       }
     });
-    t.it('Gets the current timezone', async () => {
+    t.it('Gets the timezone', async () => {
       const result = Localization.timezone;
       if (result || Platform.OS !== 'web') {
         validateString(Localization.timezone);
       }
     });
-    t.it('Gets the current layout direction (ltr only)', async () => {
+    t.it('Gets the layout direction (ltr only)', async () => {
       const result = Localization.isRTL;
       t.expect(typeof result).toBe('boolean');
       t.expect(result).toBe(false);
     });
-    t.it('Gets the current measurement system (metric)', async () => {
+    t.it('Gets the measurement system (metric)', async () => {
       const result = Localization.isMetric;
       t.expect(typeof result).toBe('boolean');
     });
@@ -111,7 +111,7 @@ export function test(t) {
       t.expect(typeof result).toBe('string');
     });
     if (Platform.OS !== 'web') {
-      t.it('Gets the current currency', async () => {
+      t.it('Gets the currency', async () => {
         validateString(Localization.currency);
       });
     }
