@@ -46,13 +46,10 @@ export const isMetric = ExpoLocalization.isMetric;
  */
 export const isRTL = ExpoLocalization.isRTL;
 
-export const language = ExpoLocalization.language;
-export const languages = ExpoLocalization.languages;
-
 /**
- * Native device language, returned in standard format.
+ * Device locale identifier (Unicode BCP 47), consisting of a language-code and optional script, region and variant codes.
  *
- * @example `en`, `en-US`, `es-US`
+ * @example `en`, `en-US`, `zh-Hans`, `zh-Hans-CN`, `en-emodeng`
  */
 export const locale = parseLocale(ExpoLocalization.locale);
 
@@ -71,9 +68,11 @@ export const locales = ExpoLocalization.locales.map(parseLocale);
 export const timezone = ExpoLocalization.timezone;
 
 /**
- * **Available on iOS and web**: Region code for your device which came from Region setting in Language & Region.
+ * Region code for your device which came from Region setting in Language & Region.
+ * This value is always available on iOS, but might not be available on Android devices
+ * without a SIM card.
  *
- * @example `US`, `NZ`
+ * @example `US`, `NZ`, null
  */
 export const region = ExpoLocalization.region;
 

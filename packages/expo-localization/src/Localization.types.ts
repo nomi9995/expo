@@ -1,35 +1,3 @@
-export type LocalizationLanguage = {
-  /**
-   * Two character ISO 639-1 language code.
-   *
-   * @example `en`, `nl`, `az`
-   */
-  code: string;
-  /**
-   * Returns if the language is written from Right-to-Left.
-   * This can be used to build features like [bidirectional icons](https://material.io/design/usability/bidirectionality.html).
-   */
-  isRTL: boolean;
-  /**
-   * Optional two character ISO 3166-1 country code.
-   *
-   * @example `US`, `NL`, `AU`
-   */
-  region: string | null;
-  /**
-   * Optional four character script code.
-   *
-   * @example `Latn`, `Cyrl`, `Hans`
-   */
-  script: string | null;
-  /**
-   * Optional language variant.
-   *
-   * @example `Latn`, `Cyrl`, `Hans`
-   */
-  variant: string | null;
-};
-
 export type Localization = {
   /**
    * Three character ISO 4217 currency code.
@@ -65,30 +33,24 @@ export type Localization = {
    */
   isRTL: boolean;
   /**
-   * Current device language object.
-   */
-  language: LocalizationLanguage;
-  /**
-   * Current device language object.
-   */
-  languages: LocalizationLanguage[];
-  /**
-   * Device language identifier, returned in standard format.
+   * Device locale identifier (Unicode BCP 47), consisting of a language-code and optional script, region and variant codes.
    *
-   * @example `en`, `en-US`, `nl-NL`, `zh-Hans`
+   * @example `en`, `en-US`, `zh-Hans`, `zh-Hans-CN`, `en-emodeng`
    */
   locale: string;
   /**
    * List of all the languages provided by the user settings.
    * These are returned in the order the user defines in their native settings.
    *
-   * @example [`en`,`en-US`,`nl-NL`, `zh-Hans`]
+   * @example [`en`, `en-US`, `zh-Hans`, `zh-Hans-CN`, `en-emodeng`]
    */
   locales: string[];
   /**
-   * **Available on iOS and web**: Region code for your device which came from Region setting in Language & Region.
+   * Region code for your device which came from Region setting in Language & Region.
+   * This value is always available on iOS, but might not be available on Android devices
+   * without a SIM card.
    *
-   * @example `US`, `NZ`
+   * @example `US`, `NZ`, null
    */
   region: string | null;
   /**

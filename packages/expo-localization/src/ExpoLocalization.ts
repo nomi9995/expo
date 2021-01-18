@@ -2,23 +2,7 @@
 import { Platform } from '@unimodules/core';
 import * as rtlDetect from 'rtl-detect';
 
-import { Localization, LocalizationLanguage } from './Localization.types';
-
-function getLanguage(languageId: string): LocalizationLanguage {
-  if (!languageId || typeof languageId !== 'string') {
-    languageId = 'en';
-  }
-  const [prefix, suffix] = languageId.split('-');
-  const code = prefix.toLowerCase();
-  const region = suffix && suffix.length === 2 ? suffix.toUpperCase() : null;
-  const script = suffix && suffix.length === 4 ? suffix : null;
-  return {
-    code,
-    region,
-    script,
-    isRTL: rtlDetect.isRtlLang(languageId),
-  };
-}
+import { Localization } from './Localization.types';
 
 export default {
   get currency(): string | null {
@@ -44,12 +28,6 @@ export default {
         return false;
     }
     return true;
-  },
-  get language(): LocalizationLanguage {
-    return getLanguage(this.locale);
-  },
-  get languages(): LocalizationLanguage[] {
-    return this.locales.map(getLanguage);
   },
   get locale(): string {
     if (!Platform.isDOMAvailable) {
@@ -82,7 +60,16 @@ export default {
     return [];
   },
   get region(): string | null {
-    return getLanguage(this.locale).region;
+    // There is no way to obtain the current region, as is possible on native.
+    // Instead, use the country-code from the locale when possible (e.g. "en-US").
+    const { locale } = this;
+    const [, ...suffixes] = typeof locale === 'string' ? locale.split('-') : [];
+    for (const suffix in suffixes) {
+      if (suffix.length === 2) {
+        return suffix.toUpperCase();
+      }
+    }
+    return null;
   },
   async getLocalizationAsync(): Promise<Localization> {
     const {
@@ -92,8 +79,6 @@ export default {
       isoCurrencyCodes,
       isMetric,
       isRTL,
-      language,
-      languages,
       locale,
       locales,
       region,
@@ -106,8 +91,6 @@ export default {
       isoCurrencyCodes,
       isMetric,
       isRTL,
-      language,
-      languages,
       locale,
       locales,
       region,

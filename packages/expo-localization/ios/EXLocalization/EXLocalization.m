@@ -21,16 +21,10 @@ UM_EXPORT_METHOD_AS(getLocalizationAsync,
 - (NSDictionary *)constantsToExport
 {
   NSLocale *locale = [NSLocale currentLocale];
-  NSString *languageCode = [EXLocalization languageCodeForLocale:locale];
-  
+  NSString *languageCode = [locale objectForKey:NSLocaleLanguageCode];
   NSArray<NSString *> *languageIds = [NSLocale preferredLanguages];
   if (![languageIds count]) {
     languageIds = @[@"en-US"];
-  }
-  NSMutableArray<NSDictionary *> *languages = [NSMutableArray array];
-  for (NSString *languageId in languageIds) {
-    NSLocale *locale = [NSLocale localeWithLocaleIdentifier:languageId];
-    [languages addObject:[EXLocalization languageForLocale:locale]];
   }
   
   return @{
@@ -40,10 +34,8 @@ UM_EXPORT_METHOD_AS(getLocalizationAsync,
     @"isoCurrencyCodes": [NSLocale ISOCurrencyCodes],
     @"isMetric": @([[locale objectForKey:NSLocaleUsesMetricSystem] boolValue]),
     @"isRTL": @([NSLocale characterDirectionForLanguage:languageCode] == NSLocaleLanguageDirectionRightToLeft),
-    @"language": [EXLocalization languageForLocale:locale],
-    @"languages": languages,
-    @"locale": [languageIds objectAtIndex:0], // @deprecated, use localeId (returns language-ids on native & locale-id on web)
-    @"locales": languageIds, // deprecated, use languages instead (returns language-ids on native & locale-ids on web)
+    @"locale": locale.localeIdentifier,
+    @"locales": languageIds,
     @"region": [EXLocalization countryCodeForLocale:locale] ?: @"US",
     @"timezone": [NSTimeZone localTimeZone].name,
   };
@@ -65,24 +57,6 @@ UM_EXPORT_METHOD_AS(getLocalizationAsync,
 {
   NSString *currencyCode = [locale objectForKey:NSLocaleCurrencyCode];
   return currencyCode != nil ? [currencyCode uppercaseString] : nil;
-}
-
-+ (NSString * _Nonnull)languageCodeForLocale:(NSLocale * _Nonnull)locale
-{
-  NSString *languageCode = [locale objectForKey:NSLocaleLanguageCode];
-  return languageCode != nil ? [languageCode lowercaseString] : @"en";
-}
-
-+ (NSDictionary * _Nonnull)languageForLocale:(NSLocale * _Nonnull)locale
-{
-  NSString *languageCode = [EXLocalization languageCodeForLocale:locale];
-  return @{
-    @"code": languageCode,
-    @"isRTL": @([NSLocale characterDirectionForLanguage:languageCode] == NSLocaleLanguageDirectionRightToLeft),
-    @"region": UMNullIfNil([EXLocalization countryCodeForLocale:locale]),
-    @"script": UMNullIfNil([locale objectForKey:NSLocaleScriptCode]),
-    @"variant": UMNullIfNil([locale objectForKey:NSLocaleVariantCode]),
-  };
 }
 
 @end

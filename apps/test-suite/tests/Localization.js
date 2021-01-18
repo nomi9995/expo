@@ -1,6 +1,6 @@
 import * as Localization from 'expo-localization';
-import { Platform } from 'react-native';
 import i18n from 'i18n-js';
+import { Platform } from 'react-native';
 
 const en = {
   good: 'good',
@@ -20,88 +20,101 @@ const pl = {
 export const name = 'Localization';
 
 export function test(t) {
+  function validateString(result) {
+    t.expect(result).toBeDefined();
+    t.expect(typeof result).toBe('string');
+    t.expect(result.length > 0).toBe(true);
+  }
+
+  function validateStringArray(result) {
+    t.expect(result).toBeDefined();
+    t.expect(Array.isArray(result)).toBe(true);
+  }
+
   t.describe(`Localization methods`, () => {
     t.it('expect async to return locale', async () => {
-      function validateString(result) {
-        t.expect(result).toBeDefined();
-        t.expect(typeof result).toBe('string');
-        t.expect(result.length > 0).toBe(true);
-      }
-
-      function validateStringArray(result) {
-        t.expect(result).toBeDefined();
-        t.expect(Array.isArray(result)).toBe(true);
-      }
-
       const {
+        currency,
+        decimalSeparator,
+        groupingSeparator,
+        isoCurrencyCodes,
+        isMetric,
+        isRTL,
         locale,
         locales,
         timezone,
-        isoCurrencyCodes,
         region,
-        isRTL,
       } = await Localization.getLocalizationAsync();
 
       validateString(locale);
       validateString(timezone);
-      if (Platform.OS === 'ios') {
+      if (Platform.OS !== 'web' || region) {
         validateString(region);
       }
       validateStringArray(isoCurrencyCodes);
       validateStringArray(locales);
       t.expect(locales[0]).toBe(Localization.locale);
       t.expect(typeof isRTL).toBe('boolean');
+      t.expect(typeof isMetric).toBe('boolean');
+      validateString(decimalSeparator);
+      validateString(groupingSeparator);
+      if (Platform.OS !== 'web' || currency) {
+        validateString(currency);
+      }
     });
   });
 
   t.describe(`Localization defines constants`, () => {
-    if (Platform.OS === 'ios') {
-      t.it('Gets the current device country', async () => {
-        const result = Localization.region;
-
-        t.expect(result).toBeDefined();
-        t.expect(typeof result).toBe('string');
-        t.expect(result.length > 0).toBe(true);
-      });
-    }
+    t.it('Gets the current device country', async () => {
+      const result = Localization.region;
+      if (Platform.OS !== 'web' || result) {
+        validateString(result);
+      }
+    });
     t.it('Gets the current locale', async () => {
-      const result = Localization.locale;
-
-      t.expect(result).toBeDefined();
-      t.expect(typeof result).toBe('string');
-      t.expect(result.length > 0).toBe(true);
+      validateString(Localization.locale);
     });
     t.it('Gets the preferred locales', async () => {
       const result = Localization.locales;
-
-      t.expect(result).toBeDefined();
-      t.expect(Array.isArray(result)).toBe(true);
+      validateStringArray(result);
       t.expect(result.length > 0).toBe(true);
       t.expect(result[0]).toBe(Localization.locale);
     });
     t.it('Gets ISO currency codes', async () => {
       const result = Localization.isoCurrencyCodes;
-      t.expect(result).toBeDefined();
-      t.expect(Array.isArray(result)).toBe(true);
-      for (let iso of result) {
-        t.expect(typeof iso).toBe('string');
-        t.expect(iso.length > 0).toBe(true);
+      validateStringArray(result);
+      for (const iso of result) {
+        validateString(iso);
       }
     });
-    if (Platform.OS !== 'web') {
-      t.it('Gets the current timezone', async () => {
-        const result = Localization.timezone;
-        t.expect(result).toBeDefined();
-        t.expect(typeof result).toBe('string');
-        t.expect(result.length > 0).toBe(true);
-      });
-    }
-
+    t.it('Gets the current timezone', async () => {
+      const result = Localization.timezone;
+      if (result || Platform.OS !== 'web') {
+        validateString(Localization.timezone);
+      }
+    });
     t.it('Gets the current layout direction (ltr only)', async () => {
       const result = Localization.isRTL;
-      t.expect(result).toBeDefined();
+      t.expect(typeof result).toBe('boolean');
       t.expect(result).toBe(false);
     });
+    t.it('Gets the current measurement system (metric)', async () => {
+      const result = Localization.isMetric;
+      t.expect(typeof result).toBe('boolean');
+    });
+    t.it('Gets the decimal separator', async () => {
+      validateString(Localization.decimalSeparator);
+    });
+    t.it('Gets the grouping separator', async () => {
+      const result = Localization.decimalSeparator;
+      t.expect(result).toBeDefined();
+      t.expect(typeof result).toBe('string');
+    });
+    if (Platform.OS !== 'web') {
+      t.it('Gets the current currency', async () => {
+        validateString(Localization.currency);
+      });
+    }
   });
 
   t.describe(`Localization works with i18n-js`, () => {

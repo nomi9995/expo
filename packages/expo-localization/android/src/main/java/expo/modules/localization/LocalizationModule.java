@@ -8,6 +8,8 @@ import android.text.TextUtils;
 import android.view.View;
 
 import java.lang.ref.WeakReference;
+import java.lang.reflect.Method;
+import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
 import java.util.Currency;
 import java.util.HashMap;
@@ -27,6 +29,8 @@ import static java.util.Currency.getAvailableCurrencies;
 
 public class LocalizationModule extends ExportedModule {
     private WeakReference<Context> mContextRef;
+
+    private static final List<String> USES_IMPERIAL = Arrays.asList("US", "LR", "MM");
 
     public LocalizationModule(Context context) {
         super(context);
@@ -64,26 +68,28 @@ public class LocalizationModule extends ExportedModule {
     private Bundle getBundledConstants() {
         Bundle constants = new Bundle();
 
+        Locale locale = Locale.getDefault();
         ArrayList<Locale> locales = getLocales();
         ArrayList<String> localeNames = getLocaleNames(locales);
-        Boolean isRTL = TextUtils.getLayoutDirectionFromLocale(Locale.getDefault()) == View.LAYOUT_DIRECTION_RTL;
-        
-        String locale = localeNames.get(0);
-        constants.putBoolean("isRTL", isRTL);
-        constants.putString("locale", locale);
-        constants.putStringArrayList("locales", localeNames);
-        constants.putString("timezone", getTimezone());
-        constants.putStringArrayList("isoCurrencyCodes", getISOCurrencyCodes());
+        Boolean isRTL = TextUtils.getLayoutDirectionFromLocale(locale) == View.LAYOUT_DIRECTION_RTL;
+        String region = getRegionCode(locale);
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols(locale);
 
+        constants.putString("currency", getCurrencyCode(locale));
+        constants.putString("decimalSeparator", String.valueOf(symbols.getDecimalSeparator()));
+        constants.putString("groupingSeparator", String.valueOf(symbols.getGroupingSeparator()));
+        constants.putStringArrayList("isoCurrencyCodes", getISOCurrencyCodes());
+        constants.putBoolean("isMetric", USES_IMPERIAL.contains(region));
+        constants.putBoolean("isRTL", isRTL);
+        constants.putString("locale", localeNames.get(0));
+        constants.putStringArrayList("locales", localeNames);
+        constants.putString("region", region);
+        constants.putString("timezone", TimeZone.getDefault().getID());
+        
         return constants;
     }
 
-    private String getTimezone() {
-        // https://stackoverflow.com/a/11061352/4047926
-        return TimeZone.getDefault().getID();
-    }
-
-    private ArrayList<String> getISOCurrencyCodes() {
+    private static ArrayList<String> getISOCurrencyCodes() {
         ArrayList<String> locales = new ArrayList<>();
         final Set<Currency> availableCurrencies = getAvailableCurrencies();
         for (Currency handle : availableCurrencies) {
@@ -111,7 +117,7 @@ public class LocalizationModule extends ExportedModule {
         return locales;
     }
 
-    private ArrayList<String> getLocaleNames(ArrayList<Locale> locales) {
+    private static ArrayList<String> getLocaleNames(ArrayList<Locale> locales) {
         ArrayList<String> languages = new ArrayList<>();
         for (Locale locale : locales) {
             // https://stackoverflow.com/a/46652446/4047926
@@ -119,4 +125,44 @@ public class LocalizationModule extends ExportedModule {
         }
         return languages;
     }
+
+    private String getRegionCode(Locale locale) {
+        String miuiRegion = getSystemProperty("ro.miui.region");
+        if (!TextUtils.isEmpty(miuiRegion)) {
+            return miuiRegion;
+        }
+        return getCountryCode(locale);
+    }
+
+    private static String getCountryCode(Locale locale) {
+        try {
+            String country = locale.getCountry();
+            if (country.equals("419")) {
+                return "UN";
+            }
+            return TextUtils.isEmpty(country) ? null : country;
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
+    private static String getSystemProperty(String key) {
+    try {
+      Class<?> systemProperties = Class.forName("android.os.SystemProperties");
+      Method get = systemProperties.getMethod("get", String.class);
+
+      return (String) get.invoke(systemProperties, key);
+    } catch (Exception ignored) {
+      return "";
+    }
+
+    private static String getCurrencyCode(Locale locale) {
+    try {
+      Currency currency = Currency.getInstance(locale);
+      return currency == null ? null : currency.getCurrencyCode();
+    } catch (Exception ignored) {
+      return null;
+    }
+  }
+  }
 }
