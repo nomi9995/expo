@@ -64,7 +64,7 @@ export default {
     // Instead, use the country-code from the locale when possible (e.g. "en-US").
     const { locale } = this;
     const [, ...suffixes] = typeof locale === 'string' ? locale.split('-') : [];
-    for (const suffix in suffixes) {
+    for (const suffix of suffixes) {
       if (suffix.length === 2) {
         return suffix.toUpperCase();
       }

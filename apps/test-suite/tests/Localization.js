@@ -83,9 +83,7 @@ export function test(t) {
     t.it('Gets ISO currency codes', async () => {
       const result = Localization.isoCurrencyCodes;
       validateStringArray(result);
-      for (const iso of result) {
-        validateString(iso);
-      }
+      result.map(validateString);
     });
     t.it('Gets the timezone', async () => {
       const result = Localization.timezone;
